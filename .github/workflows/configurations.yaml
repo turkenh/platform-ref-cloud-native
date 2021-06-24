@@ -36,7 +36,7 @@ jobs:
         with:
           channel: master
           version: current
-          command: build configuration --name package.xpkg --ignore "examples/*,hack/*"
+          command: build configuration -f ${GITHUB_WORKSPACE} --name package.xpkg --ignore "examples/*,hack/*"
       - name: Push
         uses: crossplane-contrib/xpkg-action@v0.2.0
         with:
